@@ -45,7 +45,6 @@ double Calculator::Div(double num1, double num2) {
 }
 
 void Calculator::ShowOpCount() {
-	cout << '\n';
 	cout << "덧셈: " << numOfAdd;
 	cout << " 뺄셈: " << numOfMin;
 	cout << " 곱셈: " << numOfMul;
@@ -56,5 +55,9 @@ void Calculator::ShowOpCount() {
 int main(void) {
 	Calculator cal;
 	cal.Init();
+	cout << "3.2 + 2.4 = " << cal.Add(3.2, 2.4) << '\n';
+	cout << "3.5 / 1.7 = " << cal.Div(3.5, 1.7) << '\n';
+	cout << "2.2 - 1.5 = " << cal.Min(2.2, 1.5) << '\n';
+	cout << "4.9 / 1.2 = " << cal.Div(4.9, 1.2) << '\n';
 	cal.ShowOpCount();
 }

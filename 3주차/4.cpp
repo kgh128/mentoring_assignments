@@ -56,35 +56,5 @@ void Calculator::ShowOpCount() {
 int main(void) {
 	Calculator cal;
 	cal.Init();
-	double num1 = 0, num2 = 0;
-	char op = 0, quit = 'n';
-
-	while (quit != 'y') {
-		cin >> num1;
-		cin >> op;
-		cin >> num2;
-
-		switch(op) {
-			case '+' :
-				cout << " = " << cal.Add(num1, num2) << '\n';
-				break;
-			case '-' :
-				cout << " = " << cal.Min(num1, num2) << '\n';
-				break;
-			case '*' :
-				cout << " = " << cal.Mul(num1, num2) << '\n';
-				break;
-			case '/' :
-				if (num2 == 0) {
-					cal.Div(num1, num2);
-					cout << " = " << "Error\n";
-				}
-				else
-					cout << " = " << cal.Div(num1, num2) << '\n';
-		}
-
-		cout << "                종료? (y / n) : ";
-		cin >> quit;
-	}
 	cal.ShowOpCount();
 }
